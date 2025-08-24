@@ -8,9 +8,9 @@ export const StarBackground = () => {
   useEffect(() => {
     generateStars();
     generateMeteors();
-    
+
     const handleResize = () => {
-        generateStars();
+      generateStars();
     };
 
     window.addEventListener('resize', handleResize);
