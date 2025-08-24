@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
   --color-border: hsl((var(border)));
@@ -38,15 +38,15 @@
     }
   }
   @keyframes fade-in {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
+}
   @keyframes meteor {
     0% {
       transform: rotate(215deg) translateX(0);
@@ -85,18 +85,18 @@
 
     --border: 217 33% 20%;
   }
-  * {
-    @apply border:border;
-  }
+  *{
+    @apply border-border;
+  } 
 
-  html {
-    @apply scroll:smooth;
+  *html {
+    @apply scroll-smooth;
   }
 
   body {
     @apply bg-background text-foreground transition-colors duration-300;
     font-feature-settings: 'rlig' 1, 'calt' 1;
-  }
+  } 
 }
 
 @utility container {
@@ -132,13 +132,13 @@
 @utility gradient-border {
   @apply relative rounded-md;
   background: linear-gradient(to right, hsl(var(--card)), hsl(var(--card)));
-  bakcground-clip: padding-box;
+  background-clip: padding-box;
   border: 1px solid transparent;
 }
 
 @utility cosmic-button {
   @apply px-6 py-4 rounded-full bg-primary text-primary-foreground font-medium 
-  transition-all duration 300 hover:shadow-[0_0_10px_rgba(139,92,246,0.6)]
+  transition-all duration-300 hover:shadow-[0_0_10px_rgba(139,92,246,0.6)]
   hover:scale-105 active:scale-95;
 }
 
