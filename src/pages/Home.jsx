@@ -1,3 +1,4 @@
+import { AboutMe } from '../components/AboutMe';
 import { HeroSection } from '../components/HeroSection';
 import { NavBar } from '../components/NavBar';
 import { ThemeToggle } from '../components/ThemeToggle';
@@ -16,6 +17,7 @@ export const Home = () => {
       {/* Main Content */}
       <main>
         <HeroSection />
+        <AboutMe />
       </main>
 
       {/* Footer */}
