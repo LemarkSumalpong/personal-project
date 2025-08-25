@@ -1,6 +1,7 @@
 import { cn } from '@/lib/utils';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { ThemeToggle } from './ThemeToggle';
 
 const NavItems =[
     {name: 'Home', href: "#home"},
@@ -30,7 +31,8 @@ export const NavBar = () => {
     )}>
 
         <div className="container flex items-center justify-between">
-            <a className= "text-xl font-bold text-primary flex items-center">
+            <a className= "text-xl font-bold text-primary flex items-center"
+            href="#home">
                 <span className="relative z-10">
                     <span className= "text-glow text-foreground">
                         Lemark 
@@ -38,6 +40,11 @@ export const NavBar = () => {
                     Portfolio
                 </span>
             </a>
+            {/* {desktop nav} */}
+            <div>
+
+            </div>
+            <ThemeToggle />
         </div>
     </nav>
   );
