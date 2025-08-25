@@ -38,7 +38,7 @@ export const NavBar = () => {
           href="#hero"
         >
           <span className="relative z-10">
-            <span className="text-glow text-foreground">Lemark</span>
+            <span className="text-glow text-foreground">Lemark </span>
             Portfolio
           </span>
         </a>
