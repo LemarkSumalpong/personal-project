@@ -18,10 +18,10 @@ export const ThemeToggle = () => {
   const toggleTheme = () => {
     if (isDarkMode) {
       document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light:');
+      localStorage.setItem('theme', 'light');
       setIsDarkMode(false);
     } else {
-      document.documentElement.classList.toggle('dark');
+      document.documentElement.classList.add('dark');
       localStorage.setItem('theme', 'dark');
       setIsDarkMode(true);
     }
@@ -36,7 +36,7 @@ export const ThemeToggle = () => {
     >
       {''}
       {isDarkMode ? (
-        <Sun className="w-6 h-6 text-yellow-500" />
+        <Sun className="w-6 h-6 text-yellow-400" />
       ) : (
         <Moon className="w-6 h-6 text-blue-900" />
       )}
