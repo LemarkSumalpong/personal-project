@@ -34,6 +34,13 @@ export const AboutSection = () => {
                 <div className="p-3 rounded-full bg-primary/10">
                   <Code className="h-6 w-6 text-primary" />
                 </div>
+                <div className='text-left'>
+                  <h4 className='font-semibold text-lg'>Web Development</h4>
+                  <p className='text-muted-foreground'>
+                    Proficient in HTML, CSS, JavaScript, and React to build
+                    responsive and user-friendly web applications.
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -42,12 +49,28 @@ export const AboutSection = () => {
                 <div className="p-3 rounded-full bg-primary/10">
                   <User className="h-6 w-6 text-primary" />
                 </div>
+                 <div className='text-left'>
+                  <h4 className='font-semibold text-lg'>UI/UX Design</h4>
+                  <p className='text-muted-foreground'>
+                    Experienced in designing intuitive user interfaces and
+                    enhancing user experience through thoughtful design
+                    principles.
+                  </p>
+                </div>
               </div>
             </div>
             <div className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <Briefcase className="h-6 w-6 text-primary" />
+                </div>
+                 <div className='text-left'>
+                  <h4 className='font-semibold text-lg'>Projects</h4>
+                  <p className='text-muted-foreground'>
+                    Completed various academic and personal projects
+                    demonstrating problem-solving skills and technical
+                    proficiency.
+                  </p>
                 </div>
               </div>
             </div>
