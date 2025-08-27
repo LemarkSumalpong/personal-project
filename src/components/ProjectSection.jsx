@@ -1,4 +1,4 @@
-import { ExternalLink, Github } from 'lucide-react';
+import { ArrowRight, ExternalLink, Github } from 'lucide-react';
 
 const projects = [
   {
@@ -61,23 +61,37 @@ export const ProjectSection = () => {
                     </span>
                   ))}
                 </div>
-              </div>
-              <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
-              <p className="text-muted-foreground text-sm mb-4">
-                {project.description}
-              </p>
-              <div className="flex justify-between  items-center">
-                <div className="flex space-x-3">
-                  <a href={project.demoUrl} className='text-foreground/80 hover:text-primary transition-colors duration-300'>
-                    <ExternalLink />
-                  </a>
-                  <a href={project.githubUrl} className='text-foreground/80 hover:text-primary transition-colors duration-300'>
-                    <Github />
-                  </a>
+
+                <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  {project.description}
+                </p>
+                <div className="flex justify-between  items-center">
+                  <div className="flex space-x-3">
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
+                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                    >
+                      <ExternalLink size={20} />
+                    </a>
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                    >
+                      <Github size={20} />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           ))}
+        </div>
+        <div className="text-center mt-12">
+          <a className="cosmic-button  w-fit flex items-center mx-auto gap-2" href="https://github.com/LemarkSumalpong" target='_blank'>
+            View on Github <ArrowRight size={16} />
+          </a>
         </div>
       </div>
     </section>
