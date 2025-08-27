@@ -1,5 +1,12 @@
-import { Mail, MapPin, Phone, Linkedin, Facebook, Twitter, Instagram } from 'lucide-react';
-
+import {
+  Mail,
+  MapPin,
+  Phone,
+  Linkedin,
+  Facebook,
+  Twitter,
+  Instagram,
+} from 'lucide-react';
 
 export const ContactSection = () => {
   return (
@@ -61,24 +68,45 @@ export const ContactSection = () => {
                 </div>
               </div>
             </div>
-            <div className='pt-8'>
-                <h4 className='font-medium mb-4'>Connect With Me </h4>
-                <div className='flex space-x-4 justify-center'>
-                    <a href=''>
-                       <Linkedin/>
-                    </a>
-                     <a>
-                       <Facebook/>
-                    </a>
-                     <a>
-                       <Twitter/>
-                    </a>
-                     <a>
-                       <Instagram/>
-                    </a>
-                </div>
-
+            <div className="pt-8">
+              <h4 className="font-medium mb-4">Connect With Me </h4>
+              <div className="flex space-x-4 justify-center">
+                <a
+                  href="https://www.linkedin.com/in/lemarksumalpong/"
+                  target="_blank"
+                >
+                  <Linkedin />
+                </a>
+                <a href="https://www.facebook.com/pacifist.lem" target="_blank">
+                  <Facebook />
+                </a>
+                <a href="https://x.com/LemarkSumalpong" target="_blank">
+                  <Twitter />
+                </a>
+                <a
+                  href="https://www.instagram.com/pacifist.lem/"
+                  target="_blank"
+                >
+                  <Instagram />
+                </a>
+              </div>
             </div>
+          </div>
+          <div className="bg-card p-8 rounded-lg shadow-xs">
+            <h3 className="text-2xl fond-semibold mb-6">Send a Message</h3>
+            <form className="space-y-6">
+              <div>
+                <label htmlFor="name">Your Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  className="w-full px-4 py-3 rounded-sm border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
+                  placeholder="Lemark Sumalpong..."
+                />
+              </div> 
+            </form>
           </div>
         </div>
       </div>
