@@ -1,11 +1,12 @@
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone, Linkedin, Facebook, Twitter, Instagram } from 'lucide-react';
+
 
 export const ContactSection = () => {
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          Connect with <span className="text-primary">Me</span>
+          Get In <span className="text-primary">Touch</span>
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-2-2xl mx-auto">
           I'm always open to discussing new projects, creative ideas, or
@@ -59,6 +60,24 @@ export const ContactSection = () => {
                   </a>
                 </div>
               </div>
+            </div>
+            <div className='pt-8'>
+                <h4 className='font-medium mb-4'>Connect With Me </h4>
+                <div className='flex space-x-4 justify-center'>
+                    <a href=''>
+                       <Linkedin/>
+                    </a>
+                     <a>
+                       <Facebook/>
+                    </a>
+                     <a>
+                       <Twitter/>
+                    </a>
+                     <a>
+                       <Instagram/>
+                    </a>
+                </div>
+
             </div>
           </div>
         </div>
