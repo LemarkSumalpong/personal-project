@@ -96,7 +96,8 @@ export const ContactSection = () => {
             <h3 className="text-2xl fond-semibold mb-6">Send a Message</h3>
             <form className="space-y-6">
               <div>
-                <label htmlFor="name">Your Name</label>
+                <label htmlFor="name" className='block text-sm font-medium mb-2'
+                >Your Name</label>
                 <input
                   type="text"
                   id="name"
@@ -106,6 +107,30 @@ export const ContactSection = () => {
                   placeholder="Lemark Sumalpong..."
                 />
               </div> 
+              <div>
+                <label htmlFor="email" className='block text-sm font-medium mb-2'
+                >Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  className="w-full px-4 py-3 rounded-sm border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
+                  placeholder="exampleemail@gmail.com..."
+                />
+              </div> 
+               <div>
+                <label htmlFor="message" className='block text-sm font-medium mb-2'
+                >Your Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  className="w-full px-4 py-3 rounded-sm border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none"
+                  placeholder="Type your message here..."
+                />
+              </div> 
+             
             </form>
           </div>
         </div>
