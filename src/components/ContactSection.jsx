@@ -7,8 +7,19 @@ import {
   Twitter,
   Instagram,
 } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { Send } from 'lucide-react';
+
 
 export const ContactSection = () => {
+
+  const handleSubmit =(e) => {
+    e.preventDefault()
+    
+    setInterval(() => {
+      
+    }, 1500);
+  }
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
@@ -130,7 +141,12 @@ export const ContactSection = () => {
                   placeholder="Type your message here..."
                 />
               </div> 
-             
+              <button type='submit' className={cn("cosmic-button w-full flex items-center justify-center gap-2",
+
+              )}>
+                Send Message
+                <Send size={16} />
+              </button>
             </form>
           </div>
         </div>
