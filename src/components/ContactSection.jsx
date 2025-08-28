@@ -12,19 +12,24 @@ import { Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { useState } from 'react';
 
-
 export const ContactSection = () => {
-  const {toast} =useToast();
+  const { toast } = useToast();
 
-  const handleSubmit =(e) => {
-    e.preventDefault()
-    
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    setIsSubmitting(true);
+
     setTimeout(() => {
       toast({
-        title: "Your Message has been sent!",
-        description: "Thank you for your message, I'll get back to you ASAP."
-      })
+        title: 'Your Message has been sent!',
+        description: "Thank you for your message, I'll get back to you ASAP.",
+      });
+       setIsSubmitting(false);
     }, 1500);
+
   };
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
@@ -109,12 +114,19 @@ export const ContactSection = () => {
               </div>
             </div>
           </div>
-          <div className="bg-card p-8 rounded-lg shadow-xs" onSubmit={handleSubmit}>
+          <div
+            className="bg-card p-8 rounded-lg shadow-xs"
+            onSubmit={handleSubmit}
+          >
             <h3 className="text-2xl fond-semibold mb-6">Send a Message</h3>
             <form className="space-y-6">
               <div>
-                <label htmlFor="name" className='block text-sm font-medium mb-2'
-                >Your Name</label>
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium mb-2"
+                >
+                  Your Name
+                </label>
                 <input
                   type="text"
                   id="name"
@@ -123,10 +135,14 @@ export const ContactSection = () => {
                   className="w-full px-4 py-3 rounded-sm border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
                   placeholder="Lemark Sumalpong..."
                 />
-              </div> 
+              </div>
               <div>
-                <label htmlFor="email" className='block text-sm font-medium mb-2'
-                >Email</label>
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium mb-2"
+                >
+                  Email
+                </label>
                 <input
                   type="email"
                   id="email"
@@ -135,10 +151,14 @@ export const ContactSection = () => {
                   className="w-full px-4 py-3 rounded-sm border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
                   placeholder="exampleemail@gmail.com..."
                 />
-              </div> 
-               <div>
-                <label htmlFor="message" className='block text-sm font-medium mb-2'
-                >Your Message</label>
+              </div>
+              <div>
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium mb-2"
+                >
+                  Your Message
+                </label>
                 <textarea
                   id="message"
                   name="message"
@@ -146,11 +166,15 @@ export const ContactSection = () => {
                   className="w-full px-4 py-3 rounded-sm border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none"
                   placeholder="Type your message here..."
                 />
-              </div> 
-              <button type='submit' className={cn("cosmic-button w-full flex items-center justify-center gap-2",
-
-              )}>
-                Send Message
+              </div>
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className={cn(
+                  'cosmic-button w-full flex items-center justify-center gap-2'
+                )}
+              >
+               {isSubmitting ? "Sending..." : "Send Message"}
                 <Send size={16} />
               </button>
             </form>
