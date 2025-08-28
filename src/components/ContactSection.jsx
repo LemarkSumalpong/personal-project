@@ -9,17 +9,23 @@ import {
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Send } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
+import { useState } from 'react';
 
 
 export const ContactSection = () => {
+  const {toast} =useToast();
 
   const handleSubmit =(e) => {
     e.preventDefault()
     
-    setInterval(() => {
-      
+    setTimeout(() => {
+      toast({
+        title: "Your Message has been sent!",
+        description: "Thank you for your message, I'll get back to you ASAP."
+      })
     }, 1500);
-  }
+  };
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
@@ -103,7 +109,7 @@ export const ContactSection = () => {
               </div>
             </div>
           </div>
-          <div className="bg-card p-8 rounded-lg shadow-xs">
+          <div className="bg-card p-8 rounded-lg shadow-xs" onSubmit={handleSubmit}>
             <h3 className="text-2xl fond-semibold mb-6">Send a Message</h3>
             <form className="space-y-6">
               <div>
